@@ -17,10 +17,17 @@ export class TaskListComponent implements OnInit {
 
   }
 
-  pruebaTareas():void{
+  obtenerTareas():void{
 
     this.gestorHTTP.getTareas().subscribe(x => this.tareas = x);
     console.table(this.tareas)
+
+  }
+
+  eliminarTarea(ID:number){
+
+    this.gestorHTTP.deleteTarea(ID).subscribe();
+    console.log("tonto")
 
   }
 
