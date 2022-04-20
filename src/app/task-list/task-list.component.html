@@ -1,6 +1,17 @@
 <h1>Bienvenido al Gestor de Tareas</h1>
+<div>
+    <button (click)="obtenerTareas()">Mostrar todas las tareas</button>
+    <button (click)="eliminarTarea(2)">Eliminar la tarea </button>
+    <button (click)="anyadirTarea()">Añadir tarea </button>
+    <button (click)="editarTarea()">Editar tarea </button>
+</div>
 
-<button (click)="obtenerTareas()">Mostrar todas las tareas</button>
-<button (click)="eliminarTarea(2)">Eliminar la tarea </button>
-<button (click)="anyadirTarea()">Añadir tarea </button>
-<button (click)="editarTarea()">Editar tarea </button>
+
+    <h2>Lista de tareas</h2>
+    <ul>
+        <li *ngFor="let x of tareas">
+            <h3>{{x.id}}</h3>
+            <h3> {{x.descripcion}}</h3>
+            <h3>{{x.estado}} </h3>
+        </li>
+    </ul>

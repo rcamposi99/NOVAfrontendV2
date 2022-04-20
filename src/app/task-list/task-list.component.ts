@@ -23,7 +23,6 @@ export class TaskListComponent implements OnInit {
 
     this.gestorHTTP.getTareas().subscribe(x => this.tareas = x);
     console.table(this.tareas)
-
   }
 
   /*Eliminamos una tarea por Id*/
