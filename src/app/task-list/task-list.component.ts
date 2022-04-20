@@ -31,4 +31,26 @@ export class TaskListComponent implements OnInit {
 
   }
 
+  anyadirTarea(){
+
+    const tarea1: Tarea ={
+      id: 2,
+      descripcion: "Hola",
+      estado: "Hecho"
+    }
+
+    this.gestorHTTP.postTarea(tarea1).subscribe();
+  }
+
+  editarTarea(){
+
+    const tarea1: Tarea ={
+      id: 2,
+      descripcion: "Cosote",
+      estado: "Hecho"
+    }
+
+    this.gestorHTTP.putTarea(tarea1).subscribe();
+  }
+
 }

@@ -39,6 +39,21 @@ export class TareasServiceService {
   /*Eliminar tarea por ID*/
   deleteTarea(ID:number){
     return this.gestorHTTP.request<any>('delete',`${this.baseURL}tarea/${ID}`);
-
   }
+
+  /*Eliminar todas las tareas*/
+  deleteTareas(){
+    return this.gestorHTTP.request<any>('delete',`${this.baseURL}tareas/`);
+  }
+
+  /*Añadir una tarea*/
+  postTarea(tarea: Tarea){
+    return this.gestorHTTP.post(this.baseURL+"tarea", tarea);
+  }
+
+  /*Editar una tarea*/
+  putTarea(tarea: Tarea){
+    return this.gestorHTTP.put(this.baseURL+"tarea", tarea)
+  }
+
 }
