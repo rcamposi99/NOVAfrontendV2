@@ -46,7 +46,7 @@ export class TaskListComponent implements OnInit {
 
     const tarea1: Tarea ={
       id: 2,
-      descripcion: "Cosote",
+      descripcion: "Cosote 2",
       estado: "Hecho"
     }
 
