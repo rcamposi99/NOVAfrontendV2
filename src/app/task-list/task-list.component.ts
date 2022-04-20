@@ -15,7 +15,7 @@ export class TaskListComponent implements OnInit {
   constructor(private gestorHTTP: TareasServiceService) { }
 
   ngOnInit(): void {
-
+    this.obtenerTareas();
   }
 
   /*Obtenemos una lista de tareas*/

@@ -9,9 +9,19 @@
 
     <h2>Lista de tareas</h2>
     <ul>
-        <li *ngFor="let x of tareas">
-            <h3>{{x.id}}</h3>
-            <h3> {{x.descripcion}}</h3>
-            <h3>{{x.estado}} </h3>
-        </li>
+        <div *ngFor="let x of tareas">
+            <div>
+                <mat-card class="example-card">
+                <mat-card-title-group>
+                  <mat-card-title>{{ x.id}}</mat-card-title>
+                  <mat-card-subtitle>{{x.estado}}</mat-card-subtitle>
+                  <button mat-raised-button color="warn" (click)="eliminarTarea(2)">Delete</button>
+                </mat-card-title-group>
+                <mat-card-content>
+                  {{x.descripcion}}
+                </mat-card-content>
+                </mat-card>
+            </div>
+            
+        </div>
     </ul>
