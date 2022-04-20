@@ -11,12 +11,14 @@ export class TaskListComponent implements OnInit {
 
   tareas: Tarea[] = [];
 
+
   constructor(private gestorHTTP: TareasServiceService) { }
 
   ngOnInit(): void {
 
   }
 
+  /*Obtenemos una lista de tareas*/
   obtenerTareas():void{
 
     this.gestorHTTP.getTareas().subscribe(x => this.tareas = x);
@@ -24,6 +26,7 @@ export class TaskListComponent implements OnInit {
 
   }
 
+  /*Eliminamos una tarea por Id*/
   eliminarTarea(ID:number){
 
     this.gestorHTTP.deleteTarea(ID).subscribe();
@@ -31,6 +34,12 @@ export class TaskListComponent implements OnInit {
 
   }
 
+  /*Eliminamos todas las tareas de la DB*/
+  eliminarTareas(){
+    this.gestorHTTP.deleteTareas().subscribe();
+  }
+
+  /*Añadimos una tarea*/
   anyadirTarea(){
 
     const tarea1: Tarea ={
@@ -42,6 +51,7 @@ export class TaskListComponent implements OnInit {
     this.gestorHTTP.postTarea(tarea1).subscribe();
   }
 
+  /*Editamos una tarea*/
   editarTarea(){
 
     const tarea1: Tarea ={
