@@ -31,11 +31,8 @@ export class TaskListComponent implements OnInit {
 
   /*Mostrar bloque de las tareas*/
   mostrarListaTareas(){
-
-    console.log("antes: " + this.displayTareas)
     this.obtenerTareas();
     this.displayTareas = this.switchBoolean(this.displayTareas); //Decimos si hemos de mostrar o no el bloque de tareas
-    console.log("despues: " + this.displayTareas)
   }
 
   /*Obtenemos una lista de tareas*/

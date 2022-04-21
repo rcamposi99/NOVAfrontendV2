@@ -1,0 +1,17 @@
+
+<div [ngClass]="{'task-list':displayTareasC === true, 
+                'hide-task-list':displayTareasC === false}">
+                <h2 class="titulo">Tareas completadas</h2>
+                <div class="example-card" *ngFor="let x of tareasC">
+                    <mat-card>
+                        <mat-card-title-group>
+                            <mat-card-title>ID: {{ x.id}}</mat-card-title>
+                            <mat-card-subtitle>Estado: {{x.estado}}</mat-card-subtitle>
+                            <button class="delete-button" (click)="eliminarTarea(x.id)">Delete</button>
+                        </mat-card-title-group>
+                        <mat-card-content>
+                            Descripcion: {{x.descripcion}}
+                        </mat-card-content>
+                    </mat-card>       
+                </div>
+</div>

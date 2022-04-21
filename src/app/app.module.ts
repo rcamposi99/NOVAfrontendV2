@@ -17,6 +17,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogoAnyadirTareaComponent } from './dialogo-anyadir-tarea/dialogo-anyadir-tarea.component';
 import { MenuComponent } from './menu/menu.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { TareasCompletadasComponent } from './tareas-completadas/tareas-completadas.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
     TaskListComponent,
     DialogoAnyadirTareaComponent,
     MenuComponent,
+    TareasCompletadasComponent,
   ],
   imports: [
     BrowserModule,
