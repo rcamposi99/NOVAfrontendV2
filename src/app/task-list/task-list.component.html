@@ -1,4 +1,4 @@
-<h1>Bienvenido al Gestor de Tareas</h1>
+
 <div>
     <button (click)="obtenerTareas()">Mostrar todas las tareas</button>
     <button (click)="eliminarTarea(2)">Eliminar la tarea </button>
@@ -6,22 +6,18 @@
     <button (click)="editarTarea()">Editar tarea </button>
 </div>
 
-
-    <h2>Lista de tareas</h2>
-    <ul>
-        <div *ngFor="let x of tareas">
-            <div>
-                <mat-card class="example-card">
+<div class="task-list">
+    <div class="example-card" *ngFor="let x of tareas">
+            <mat-card>
                 <mat-card-title-group>
-                  <mat-card-title>{{ x.id}}</mat-card-title>
-                  <mat-card-subtitle>{{x.estado}}</mat-card-subtitle>
-                  <button mat-raised-button color="warn" (click)="eliminarTarea(2)">Delete</button>
+                    <mat-card-title>ID: {{ x.id}}</mat-card-title>
+                    <mat-card-subtitle>Estado: {{x.estado}}</mat-card-subtitle>
+                    <button mat-raised-button color="warn" (click)="eliminarTarea(2)">Delete</button>
                 </mat-card-title-group>
                 <mat-card-content>
-                  {{x.descripcion}}
+                    Descripcion: {{x.descripcion}}
                 </mat-card-content>
-                </mat-card>
-            </div>
-            
-        </div>
-    </ul>
+            </mat-card>       
+    </div>
+</div>
+

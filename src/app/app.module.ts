@@ -9,11 +9,13 @@ import { TareasServiceService } from './services/tareasService/tareas-service.se
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
+import { AnyadirTareaComponent } from './anyadir-tarea/anyadir-tarea.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
+    AnyadirTareaComponent,
   ],
   imports: [
     BrowserModule,
