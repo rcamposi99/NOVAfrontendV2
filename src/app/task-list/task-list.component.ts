@@ -29,7 +29,7 @@ export class TaskListComponent implements OnInit {
   eliminarTarea(ID?:number){
 
     this.gestorHTTP.deleteTarea(ID)?.subscribe();
-    console.log("tonto")
+    this.obtenerTareas();
 
   }
 

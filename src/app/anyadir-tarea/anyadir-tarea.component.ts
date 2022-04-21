@@ -21,11 +21,6 @@ export class AnyadirTareaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /*Añadimos una tarea*/
-  public tareaCreada():void{
-    this.gestorHTTP.postTarea(this.tarea1).subscribe();
-    this.emitidorEventos?.emit("Has añadido la tarea: " + this.tarea1?.id)
-  }
 
   /*Abrimos el cuadro de diálogo con los datos para crear una nueva tarea*/
   abrirDialogo(){

@@ -38,7 +38,7 @@ export class TareasServiceService {
 
   /*Eliminar tarea por ID*/
   deleteTarea(ID?:number){
-    return this.gestorHTTP.request<any>('delete',`${this.baseURL}tarea/${ID}`);
+    return this.gestorHTTP.delete(`${this.baseURL}tarea/${ID}`);
   }
 
   /*Eliminar todas las tareas*/
