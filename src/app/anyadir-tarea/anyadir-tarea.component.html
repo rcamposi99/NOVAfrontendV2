@@ -2,3 +2,36 @@
     <button class="botton-add" mat-raised-button>Añadir tarea</button>
 </div>
 
+<div class="add-card">
+            <mat-card>
+                <mat-card-title-group class="add-card-header">
+                    <mat-card-title class="add-card-title">AÑADE UNA NUEVA TAREA</mat-card-title>
+                </mat-card-title-group>
+                <mat-divider></mat-divider>
+                <mat-card-content>
+                    <!--Bloque done irá el formulario para crear una tarea-->
+                    <div>
+                        <form>
+                            <div class="form-group">
+                                <label for="id">ID: </label>
+                                <input class="inputStyle" type="number" id="id" placeholder="Introduce el Tarea ID" name="id" [(ngModel)]="tarea1.id">
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion">Descripcion: </label>
+                                <input class="inputStyle" type="text" id="descripcion" placeholder="Introduce la descripcion" name="descripcion" [(ngModel)]="tarea1.descripcion">
+                            </div>
+                            <div class="form-group">
+                                <label for="estado">Estado: </label>
+                                <input class="inputStyle" type="text" id="estado" placeholder="Estado" name="estado" [(ngModel)]="tarea1.estado">
+                            </div>
+                        </form>
+                    </div>
+                </mat-card-content>
+                <mat-divider></mat-divider>
+                <mat-card-footer>
+                    <button class="submit-button" mat-mini-fab color="accent" aria-label="Añade la tarea">
+                        <mat-icon>plus_one</mat-icon>
+                    </button>
+                </mat-card-footer>
+            </mat-card>       
+</div>
