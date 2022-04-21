@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { Tarea } from '../services/tareasService/tarea';
 import { TareasServiceService } from '../services/tareasService/tareas-service.service';
 
@@ -12,6 +12,8 @@ export class AnyadirTareaComponent implements OnInit {
 
   tarea1:Tarea = {};
 
+  @Output() emitidorEventos= new EventEmitter<string>(); //Sirve para emitir informacion a la clase padre, en este caso app.component.ts
+
   constructor(private gestorHTTP: TareasServiceService) { }
 
   ngOnInit(): void {
@@ -20,6 +22,7 @@ export class AnyadirTareaComponent implements OnInit {
   /*Añadimos una tarea*/
   public tareaCreada():void{
     this.gestorHTTP.postTarea(this.tarea1).subscribe();
+    this.emitidorEventos?.emit("Has añadido la tarea: " + this.tarea1?.id)
   }
 
 }

@@ -1,7 +1,7 @@
 
 <div>
     <button (click)="obtenerTareas()">Mostrar todas las tareas</button>
-    <button (click)="eliminarTarea(2)">Eliminar la tarea </button>
+    <button (click)="eliminarTareas()">Eliminar las tareas</button>
     <button (click)="editarTarea()">Editar tarea </button>
 </div>
 
@@ -11,7 +11,7 @@
                 <mat-card-title-group>
                     <mat-card-title>ID: {{ x.id}}</mat-card-title>
                     <mat-card-subtitle>Estado: {{x.estado}}</mat-card-subtitle>
-                    <button mat-raised-button color="warn" (click)="eliminarTarea(2)">Delete</button>
+                    <button class="delete-button" (click)="eliminarTarea(2)">Delete</button>
                 </mat-card-title-group>
                 <mat-card-content>
                     Descripcion: {{x.descripcion}}
