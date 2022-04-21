@@ -38,17 +38,7 @@ export class TaskListComponent implements OnInit {
     this.gestorHTTP.deleteTareas().subscribe();
   }
 
-  /*Añadimos una tarea*/
-  anyadirTarea(){
 
-    const tarea1: Tarea ={
-      id: 2,
-      descripcion: "Hola",
-      estado: "Hecho"
-    }
-
-    this.gestorHTTP.postTarea(tarea1).subscribe();
-  }
 
   /*Editamos una tarea*/
   editarTarea(){
