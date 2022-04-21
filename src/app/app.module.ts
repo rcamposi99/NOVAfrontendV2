@@ -14,12 +14,15 @@ import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DialogoAnyadirTareaComponent } from './dialogo-anyadir-tarea/dialogo-anyadir-tarea.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
     AnyadirTareaComponent,
+    DialogoAnyadirTareaComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatSelectModule,
     FormsModule,
     MatDividerModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [TareasServiceService],
   bootstrap: [AppComponent]

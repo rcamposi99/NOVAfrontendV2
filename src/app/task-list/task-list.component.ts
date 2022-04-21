@@ -26,9 +26,9 @@ export class TaskListComponent implements OnInit {
   }
 
   /*Eliminamos una tarea por Id*/
-  eliminarTarea(ID:number){
+  eliminarTarea(ID?:number){
 
-    this.gestorHTTP.deleteTarea(ID).subscribe();
+    this.gestorHTTP.deleteTarea(ID)?.subscribe();
     console.log("tonto")
 
   }
