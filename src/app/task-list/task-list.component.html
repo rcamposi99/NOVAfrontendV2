@@ -1,11 +1,12 @@
 
 <div>
-    <button (click)="obtenerTareas()">Mostrar todas las tareas</button>
+    <button (click)="mostrarListaTareas()">Mostrar todas las tareas</button>
     <button (click)="eliminarTareas()">Eliminar las tareas</button>
     <button (click)="editarTarea()">Editar tarea </button>
 </div>
 
-<div class="task-list">
+<div [ngClass]="{'task-list':displayTareas === true, 
+                'hide-task-list':displayTareas === false}">
     <div class="example-card" *ngFor="let x of tareas">
             <mat-card>
                 <mat-card-title-group>
@@ -19,4 +20,5 @@
             </mat-card>       
     </div>
 </div>
+
 

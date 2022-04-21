@@ -10,6 +10,7 @@ import { TareasServiceService } from '../services/tareasService/tareas-service.s
 export class TaskListComponent implements OnInit {
 
   tareas: Tarea[] = [];
+  displayTareas? : boolean = true;
 
 
   constructor(private gestorHTTP: TareasServiceService) { }
@@ -18,11 +19,29 @@ export class TaskListComponent implements OnInit {
     this.obtenerTareas();
   }
 
+  /*Simular interruptor*/
+  switchBoolean(aux?: boolean){
+
+    if(aux == true){
+      return aux = false;
+    }else{
+      return aux = true;
+    }
+  }
+
+  /*Mostrar bloque de las tareas*/
+  mostrarListaTareas(){
+
+    console.log("antes: " + this.displayTareas)
+    this.obtenerTareas();
+    this.displayTareas = this.switchBoolean(this.displayTareas); //Decimos si hemos de mostrar o no el bloque de tareas
+    console.log("despues: " + this.displayTareas)
+  }
+
   /*Obtenemos una lista de tareas*/
   obtenerTareas():void{
 
     this.gestorHTTP.getTareas().subscribe(x => this.tareas = x);
-    console.table(this.tareas)
   }
 
   /*Eliminamos una tarea por Id*/
