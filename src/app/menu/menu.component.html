@@ -1,0 +1,22 @@
+
+<div>
+    <span class="menuStyle">
+        <button mat-mini-fab color="warn" (click)="avisarMostrarListaTareas()">
+            <mat-icon>filter_list</mat-icon>
+        </button>
+        <button class="botton-add" mat-raised-button color="warn" (click)="abrirDialogo()">Añadir tarea</button>
+        <button class="botton-add" mat-raised-button color="warn" (click)="eliminarTareas()">Eliminar tareas</button>
+        <span class="selector">
+            <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+                <mat-button-toggle (click)="avisarMostrarListaTareas()" value="Todas">Todas</mat-button-toggle>
+                <mat-button-toggle value="Completadas">Completadas</mat-button-toggle>
+                <mat-button-toggle value="Pendientes">Pendientes</mat-button-toggle>
+            </mat-button-toggle-group>
+        </span>
+        
+    </span>
+</div>
+
+
+
+

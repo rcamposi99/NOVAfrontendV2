@@ -9,20 +9,21 @@ import { TareasServiceService } from './services/tareasService/tareas-service.se
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import { AnyadirTareaComponent } from './anyadir-tarea/anyadir-tarea.component';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogoAnyadirTareaComponent } from './dialogo-anyadir-tarea/dialogo-anyadir-tarea.component';
+import { MenuComponent } from './menu/menu.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
-    AnyadirTareaComponent,
     DialogoAnyadirTareaComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +36,8 @@ import { DialogoAnyadirTareaComponent } from './dialogo-anyadir-tarea/dialogo-an
     FormsModule,
     MatDividerModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonToggleModule
   ],
   providers: [TareasServiceService],
   bootstrap: [AppComponent]

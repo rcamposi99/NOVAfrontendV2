@@ -52,11 +52,6 @@ export class TaskListComponent implements OnInit {
 
   }
 
-  /*Eliminamos todas las tareas de la DB*/
-  eliminarTareas(){
-    this.gestorHTTP.deleteTareas().subscribe();
-  }
-
 
 
   /*Editamos una tarea*/

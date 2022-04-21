@@ -1,10 +1,4 @@
 
-<div>
-    <button (click)="mostrarListaTareas()">Mostrar todas las tareas</button>
-    <button (click)="eliminarTareas()">Eliminar las tareas</button>
-    <button (click)="editarTarea()">Editar tarea </button>
-</div>
-
 <div [ngClass]="{'task-list':displayTareas === true, 
                 'hide-task-list':displayTareas === false}">
     <div class="example-card" *ngFor="let x of tareas">
