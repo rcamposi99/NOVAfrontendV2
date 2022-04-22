@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Tarea } from '../services/tareasService/tarea';
 import { TareasServiceService } from '../services/tareasService/tareas-service.service';
+import {MatDialog} from '@angular/material/dialog';
+import { DialogoEditarTareaComponent } from '../dialogo-editar-tarea/dialogo-editar-tarea.component';
 
 @Component({
   selector: 'app-task-list',
@@ -12,8 +14,9 @@ export class TaskListComponent implements OnInit {
   tareas: Tarea[] = [];
   displayTareas? : boolean = true;
 
+  @Output() emitidorEventos = new EventEmitter<Tarea>();
 
-  constructor(private gestorHTTP: TareasServiceService) { }
+  constructor(public dialog: MatDialog, private gestorHTTP: TareasServiceService) { }
 
   ngOnInit(): void {
     this.obtenerTareas();
@@ -51,16 +54,18 @@ export class TaskListComponent implements OnInit {
 
 
 
-  /*Editamos una tarea*/
-  editarTarea(){
+  /*Avisamos que queremos editar un tarea*/
+  editarTarea(tarea1:Tarea){
+    this.emitidorEventos.emit(tarea1);
+  }
 
-    const tarea1: Tarea ={
-      id: 2,
-      descripcion: "Cosote 2",
-      estado: "Hecho"
-    }
+  abrirDialogo() : void {
 
-    this.gestorHTTP.putTarea(tarea1).subscribe();
+    const dialogRef = this.dialog.open(DialogoEditarTareaComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 
 }

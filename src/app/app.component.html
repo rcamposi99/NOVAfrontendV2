@@ -1,5 +1,8 @@
 <app-menu (emitidorEventos)="mostrarTareas($event)" 
           (emitidorEventos2)="refrescarTareas($event)"
-          (emitidorEventos3)="mostrarTareasC($event)"></app-menu>
-<app-task-list></app-task-list>
+          (emitidorEventos3)="mostrarTareasC($event)"
+          (emitidorEventos4)="mostrarTareasP($event)"></app-menu>
+<app-task-list (emitidorEventos)="editarTarea($event)"></app-task-list>
 <app-tareas-completadas></app-tareas-completadas>
+<app-tareas-pendientes></app-tareas-pendientes>
+

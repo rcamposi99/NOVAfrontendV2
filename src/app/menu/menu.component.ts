@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
   @Output() emitidorEventos = new EventEmitter<string>();
   @Output() emitidorEventos2 = new EventEmitter<string>();
   @Output() emitidorEventos3 = new EventEmitter<string>();
+  @Output() emitidorEventos4 = new EventEmitter<string>();
 
   constructor(public dialog: MatDialog, public gestorHTTP: TareasServiceService) { }
 
@@ -30,6 +31,11 @@ export class MenuComponent implements OnInit {
   /*Avisar que queremos ver las lista de tareas completadas*/
   avisarMostrarTareasC(): void{
     this.emitidorEventos3.emit("");
+   }
+
+  /*Avisar que queremos ver la lista de tareas pendientes*/
+   avisarMostrarTareasP():void{
+    this.emitidorEventos4.emit("");
    }
 
   /*Eliminamos todas las tareas de la DB*/

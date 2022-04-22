@@ -18,6 +18,8 @@ import { DialogoAnyadirTareaComponent } from './dialogo-anyadir-tarea/dialogo-an
 import { MenuComponent } from './menu/menu.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { TareasCompletadasComponent } from './tareas-completadas/tareas-completadas.component';
+import { TareasPendientesComponent } from './tareas-pendientes/tareas-pendientes.component';
+import { DialogoEditarTareaComponent } from './dialogo-editar-tarea/dialogo-editar-tarea.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { TareasCompletadasComponent } from './tareas-completadas/tareas-completa
     DialogoAnyadirTareaComponent,
     MenuComponent,
     TareasCompletadasComponent,
+    TareasPendientesComponent,
+    DialogoEditarTareaComponent,
   ],
   imports: [
     BrowserModule,
