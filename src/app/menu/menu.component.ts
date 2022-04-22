@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { DialogoAnyadirTareaComponent } from '../dialogo-anyadir-tarea/dialogo-anyadir-tarea.component';
 import { TareasServiceService } from '../services/tareasService/tareas-service.service';
+import { DialogoBuscarComponent } from '../dialogo-buscar/dialogo-buscar.component';
 
 
 @Component({
@@ -49,6 +50,16 @@ export class MenuComponent implements OnInit {
   abrirDialogo() : void {
 
     const dialogRef = this.dialog.open(DialogoAnyadirTareaComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  /*Abrimos el cuadro de diálogo para buscar una tarea por ID*/
+  abrirDialogoB() : void {
+
+    const dialogRef = this.dialog.open(DialogoBuscarComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);

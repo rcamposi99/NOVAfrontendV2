@@ -20,6 +20,7 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { TareasCompletadasComponent } from './tareas-completadas/tareas-completadas.component';
 import { TareasPendientesComponent } from './tareas-pendientes/tareas-pendientes.component';
 import { DialogoEditarTareaComponent } from './dialogo-editar-tarea/dialogo-editar-tarea.component';
+import { DialogoBuscarComponent } from './dialogo-buscar/dialogo-buscar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DialogoEditarTareaComponent } from './dialogo-editar-tarea/dialogo-edit
     TareasCompletadasComponent,
     TareasPendientesComponent,
     DialogoEditarTareaComponent,
+    DialogoBuscarComponent,
   ],
   imports: [
     BrowserModule,

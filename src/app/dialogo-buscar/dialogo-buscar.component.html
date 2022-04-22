@@ -1,0 +1,27 @@
+<mat-dialog-content class="mat-typography">
+    <div class="add-card">
+        <mat-card>
+            <mat-card-title-group class="add-card-header">
+                <mat-card-title class="add-card-title">BUSCAR UNA TAREA</mat-card-title>
+            </mat-card-title-group>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <!--Bloque donde ira el campo de busqueda del id-->
+                <div>
+                    <form class="cuadritos">
+                        <div class="form-group">
+                            <span class="cuadrito">
+                                <input class="inputStyle" type="number" id="id" placeholder="Introduce el Tarea ID" name="id" [(ngModel)]="id1">
+                            </span>
+                        </div>
+                    </form>  
+                </div>
+            </mat-card-content>
+            <mat-card-footer>
+                <button class="submit-button" mat-mini-fab color="accent" mat-dialog-close >
+                    <mat-icon>menu</mat-icon>
+                </button>
+            </mat-card-footer>
+        </mat-card>       
+    </div>
+</mat-dialog-content>
