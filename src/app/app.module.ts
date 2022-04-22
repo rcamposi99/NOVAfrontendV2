@@ -21,6 +21,7 @@ import { TareasCompletadasComponent } from './tareas-completadas/tareas-completa
 import { TareasPendientesComponent } from './tareas-pendientes/tareas-pendientes.component';
 import { DialogoEditarTareaComponent } from './dialogo-editar-tarea/dialogo-editar-tarea.component';
 import { DialogoBuscarComponent } from './dialogo-buscar/dialogo-buscar.component';
+import { DialogoTareaIdComponent } from './dialogo-tarea-id/dialogo-tarea-id.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { DialogoBuscarComponent } from './dialogo-buscar/dialogo-buscar.componen
     TareasPendientesComponent,
     DialogoEditarTareaComponent,
     DialogoBuscarComponent,
+    DialogoTareaIdComponent,
   ],
   imports: [
     BrowserModule,

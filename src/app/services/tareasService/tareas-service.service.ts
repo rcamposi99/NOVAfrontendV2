@@ -19,7 +19,7 @@ export class TareasServiceService {
   }
 
   /*Obtener una tarea por ID */
-  getTareaID(ID: number): Observable<Tarea>{
+  getTareaID(ID?: number): Observable<Tarea>{
 
     return this.gestorHTTP.request<Tarea>('get',`${this.baseURL}/tarea/${ID}`);
   }
